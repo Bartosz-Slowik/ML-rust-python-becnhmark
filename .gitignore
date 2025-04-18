@@ -1,0 +1,28 @@
+# Rust specific
+target/
+**/*.rs.bk
+
+# Python specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+*.egg
+*.egg-info
+dist/
+build/
+*.log
+
+# CSV and large datasets
+*.csv
+
+# General
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
