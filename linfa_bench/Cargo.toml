@@ -1,0 +1,19 @@
+[package]
+name = "linfa-logistic-bench"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ndarray         = { version = "0.15", features = ["blas"] }           # enables BLAS calls :contentReference[oaicite:3]{index=3}
+ndarray-linalg  = { version = "0.17", default-features = false, features = ["openblas", "blas"] }              # choose OpenBLAS backend :contentReference[oaicite:4]{index=4}
+openblas-src    = { version = "0.10", default-features = false, features = ["system", "cblas", "lapacke"] }                                       # builds & links OpenBLAS for you :contentReference[oaicite:5]{index=5}
+linfa       = "0.7"
+linfa-logistic = "0.7"
+linfa-datasets = { version = "0.7.1", features = ["iris"] }
+
+[dev-dependencies]
+criterion   = { version = "0.5", features = ["html_reports"] }   # Criterion.rs micro-benchmarking :contentReference[oaicite:3]{index=3}
+
+[[bench]]
+name    = "bench_logistic"
+harness = false
